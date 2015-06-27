@@ -5,10 +5,11 @@ Comando        | Descrição
 /msAccess      | Arquivo de origem do Microsoft Access 2003 - 2007
 /reportName    | Nome do relatório
 /outputpdf     | Caminho de destino do PDF
+/debug         | Ativa modo debug
 
 {{color:Red}}
 Exemplo:
-          access2Pdf /msAccess:c:\\access2Pdf\test.mdb /outputPdf:c:\\access2Pdf\test.pdf /reportName:Teste
+          access2Pdf /msAccess:c:\\access2Pdf\test.mdb /outputPdf:c:\\access2Pdf\test.pdf /reportName:Teste /debug:true
 		  
 {{color:Yellow}}
                ,---. 
