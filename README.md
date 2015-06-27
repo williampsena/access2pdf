@@ -10,5 +10,7 @@ Dependências.
 
 - Microsoft Office 2003 or later
 - Instalação dos Assemblies de Interoperabilidade
+- 
     https://www.microsoft.com/en-us/download/details.aspx?id=18346
+
     https://msdn.microsoft.com/pt-br/library/15s06t57.aspx
