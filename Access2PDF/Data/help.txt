@@ -1,0 +1,35 @@
+﻿Access2PDF utiliza recursos do Microsoft Access para exportar relatórios no formato PDF.
+
+Comando        | Descrição
+-------------- | --------------
+/msAccess      | Arquivo de origem do Microsoft Access 2003 - 2007
+/reportName    | Nome do relatório
+/outputpdf     | Caminho de destino do PDF
+
+{{color:Red}}
+Exemplo:
+          access2Pdf /msAccess:c:\\access2Pdf\test.mdb /outputPdf:c:\\access2Pdf\test.pdf /reportName:Teste
+		  
+{{color:Yellow}}
+               ,---. 
+            ,.'-.   \ 
+           ( ( ,'"""""-. 
+           `,X          `. 
+           /` `           `._ 
+          (            ,   ,_\ 
+          |          ,---.,'o `. 
+          |         / o   \     ) 
+           \ ,.    (      .____, 
+            \| \    \____,'     \ 
+          '`'\  \        _,____,' 
+          \  ,--      ,-'     \ 
+            ( C     ,'         \ 
+             `--'  .'           | 
+               |   |         .O | 
+             __|    \        ,-'_ 
+            / `L     `._  _,'  ' `. 
+           /    `--.._  `',.   _\  ` 
+           `-.       /\  | `. ( ,\  \ 
+          _/  `-._  /  \ |--'  (     \ 
+         '  `-.   `'    \/\`.   `.    ) 
+               \         \ `.  |    | 
