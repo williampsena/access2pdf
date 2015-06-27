@@ -32,9 +32,9 @@ namespace Access2PDF.Helpers
         public string MsAccess { get; set;}
 
         /// <summary>
-        /// Lista de filtros do Microsoft Access
+        /// Filtro do Microsoft Access
         /// </summary>
-        public List<string> Filters { get; set; }
+        public string Filter { get; set; }
 
         /// <summary>
         /// Lista de todos os argumentos
@@ -47,7 +47,6 @@ namespace Access2PDF.Helpers
         public CommandModel()
         {
             Arguments = new Dictionary<string,string>();
-            Filters = new List<string>();
         }
     }
 
@@ -162,7 +161,7 @@ namespace Access2PDF.Helpers
                             model.OutputPdf = value;
                             break;
                         case "FILTER":
-                            model.Filters.AddRange(value.Split(new string[] { "|||" }, StringSplitOptions.None));
+                            model.Filter = value;
                             break;
                     }
 

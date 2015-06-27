@@ -21,7 +21,7 @@ namespace Access2PDF.Commons
         /// <param name="msAccess"></param>
         /// <param name="outputPdf"></param>
         /// <param name="filtersReport"></param>
-        public static void GenerateFile(string reportName, string msAccess, string outputPdf, List<string> filtersReport)
+        public static void GenerateFile(string reportName, string msAccess, string outputPdf, string filterReport)
         {
             var app = new MsAccess.Application();
 
@@ -39,21 +39,18 @@ namespace Access2PDF.Commons
                 app.OpenCurrentDatabase(msAccess, false, "");
                 app.Visible = false;
 
-                if (filtersReport != null)
+                if (!string.IsNullOrWhiteSpace(filterReport))
                 {
-                    filtersReport.ForEach(filterReport =>
-                    {
-                        app.DoCmd.OpenReport(
-                            reportName,
-                            MsAccess.AcView.acViewReport,
-                            null,
-                            filterReport,
-                            MsAccess.AcWindowMode.acHidden,
-                            null
-                        );
+                    app.DoCmd.OpenReport(
+                        reportName,
+                        MsAccess.AcView.acViewReport,
+                        null,
+                        filterReport,
+                        MsAccess.AcWindowMode.acHidden,
+                        null
+                    );
 
-                        ExportToPdf(app, reportName, outputPdf);
-                    });
+                    ExportToPdf(app, reportName, outputPdf);
                     
                 }
                 else

@@ -22,7 +22,7 @@ namespace Access2PDF
 
             try
             {
-                PdfConvert.GenerateFile(commands.ReportName, commands.MsAccess, commands.OutputPdf, commands.Filters);
+                PdfConvert.GenerateFile(commands.ReportName, commands.MsAccess, commands.OutputPdf, commands.Filter);
 
                 Console.ForegroundColor = ConsoleColor.Yellow;
 
