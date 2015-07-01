@@ -139,7 +139,7 @@ namespace Access2PDF.Helpers
 
             args.ToList().ForEach(x =>
             {
-                var matchCmd = Regex.Match(x, REGEXCMD, RegexOptions.IgnoreCase);
+                var matchCmd = Regex.Match(x.Replace("\"", string.Empty), REGEXCMD, RegexOptions.IgnoreCase);
 
                 if (matchCmd.Success)
                 {
@@ -163,6 +163,9 @@ namespace Access2PDF.Helpers
                         case "FILTER":
                             model.Filter = value;
                             break;
+                        case "DATA":
+                            model = DecodeDataArgument(value, model);
+                            break;
                     }
 
                     model.Arguments.Add(name, value);
@@ -171,6 +174,35 @@ namespace Access2PDF.Helpers
             });
 
             return model;
+        }
+
+        private static CommandModel DecodeDataArgument(string data, CommandModel model)
+        {
+            data = DecodeBase64(data);
+
+            var commands = ParseArguments(data);
+
+            return GetModel(commands);
+        }
+
+        private static string DecodeBase64(string encodedString)
+        {
+            byte[] data = Convert.FromBase64String(encodedString);
+            
+            return Encoding.UTF8.GetString(data);
+        }
+        private static string[] ParseArguments(string commandLine)
+        {
+            char[] parmChars = commandLine.ToCharArray();
+            bool inQuote = false;
+            for (int index = 0; index < parmChars.Length; index++)
+            {
+                if (parmChars[index] == '"')
+                    inQuote = !inQuote;
+                if (!inQuote && parmChars[index] == ' ')
+                    parmChars[index] = '\n';
+            }
+            return (new string(parmChars)).Split('\n');
         }
     }
 }

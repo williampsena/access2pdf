@@ -6,10 +6,13 @@ Comando        | Descrição
 /reportName    | Nome do relatório
 /outputpdf     | Caminho de destino do PDF
 /debug         | Ativa modo debug
+/data          | Dados em base 64
 
 {{color:Red}}
 Exemplo:
           access2Pdf /msAccess:c:\\access2Pdf\test.mdb /outputPdf:c:\\access2Pdf\test.pdf /reportName:Teste /debug:true
+
+		  access2pdf /data:L21zQWNjZXNzOmM6XFxhY2Nlc3MyUGRmXHRlc3QubWRiIC9vdXRwdXRQZGY6YzpcXGFjY2VzczJQZGZcdGVzdC5wZGYgL3JlcG9ydE5hbWU6VGVzdGUgL2RlYnVnOnRydWU=
 		  
 {{color:Yellow}}
                ,---. 
