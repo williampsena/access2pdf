@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access2PDF", "Access2PDF\Ac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access2PDF.Commons", "Access2PDF.Commons\Access2PDF.Commons.csproj", "{32EDF1E7-83D5-44F7-B424-02714D0268F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access2Pdf.Test", "Access2Pdf.Test\Access2Pdf.Test.csproj", "{4094E101-39B7-4E99-8992-87F771E183B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{32EDF1E7-83D5-44F7-B424-02714D0268F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32EDF1E7-83D5-44F7-B424-02714D0268F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32EDF1E7-83D5-44F7-B424-02714D0268F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4094E101-39B7-4E99-8992-87F771E183B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4094E101-39B7-4E99-8992-87F771E183B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4094E101-39B7-4E99-8992-87F771E183B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4094E101-39B7-4E99-8992-87F771E183B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,7 +21,7 @@ namespace Access2PDF.Commons
         /// <param name="msAccess"></param>
         /// <param name="outputPdf"></param>
         /// <param name="filtersReport"></param>
-        public static void GenerateFile(string reportName, string msAccess, string outputPdf, string filterReport)
+        public static void GenerateFile(string reportName, string msAccess, string outputPdf, string filterReport, bool debugMode = false)
         {
             var app = new MsAccess.Application();
 
@@ -37,7 +37,7 @@ namespace Access2PDF.Commons
                     throw new ArgumentException("Arquivo de destino inválido", "msAccess");
                 
                 app.OpenCurrentDatabase(msAccess, false, "");
-                app.Visible = false;
+                app.Visible = debugMode == true;
 
                 if (!string.IsNullOrWhiteSpace(filterReport))
                 {
