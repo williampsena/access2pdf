@@ -8,7 +8,7 @@ Referência.
 
 Dependências.
 
-- Microsoft Office 2003 or superior
+- Microsoft Office 2003 ou superior
 - Instalação dos Assemblies de Interoperabilidade
 - 
     https://www.microsoft.com/en-us/download/details.aspx?id=18346
